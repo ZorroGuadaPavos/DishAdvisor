@@ -1,0 +1,8 @@
+uvicorn==0.29.0
+fastapi==0.111.0
+python-dotenv==1.0.1
+pydantic-settings==2.2.1
+openai==1.34.0
+# ------
+ruff
+isort
