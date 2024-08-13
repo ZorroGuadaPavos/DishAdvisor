@@ -1,14 +1,18 @@
-from contextlib import asynccontextmanager
-
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
-from .api import router
+from src.core.config import settings
+from src.routers import api_router
+
+app = FastAPI()
+
+# Set all CORS enabled origins
+if settings.BACKEND_CORS_ORIGINS:
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=['*'],
+        allow_methods=['GET', 'POST'],
+    )
 
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    app.include_router(router)
-    yield
-
-
-app = FastAPI(lifespan=lifespan)
+app.include_router(api_router, prefix=settings.API_V1_STR)

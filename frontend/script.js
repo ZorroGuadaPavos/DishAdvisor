@@ -31,7 +31,7 @@ function transformReviews(reviews) {
 }
 
 function postReviews(reviews) {
-    return fetch('http://127.0.0.1:8000/api/v1/recommendations/', {
+    return fetch('http://localhost:8000/api/v1/recommendations/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ function displayRecommendations(data) {
     const recommendations = document.getElementById('recommendations');
     recommendations.innerHTML = ''; 
     const list = document.createElement('ul');
-    data.split('\n').forEach(item => {
+    data.forEach(item => {
         const listItem = document.createElement('li');
         listItem.textContent = item;
         list.appendChild(listItem);
