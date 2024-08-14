@@ -1,10 +1,12 @@
-# dishAdvisor
+# DishAdvisor
 
 ## Overview
-`dishAdvisor` is a PROTOTYPE for a web application that provides restaurant dish recommendations based on user reviews. It leverages the Google Maps API for location-based search and a backend service to process and analyze reviews.
+The core idea is to help users discover the best dishes based on reviews posted on google maps. This project is a **Prototype** that demonstrates how user feedback can guide diners to the most popular and highly-rated meals.
+
+<img src="preview.gif" alt="Preview" width="50%">
 
 ### Backend
-The backend is a Python-based service that handles API requests, processes reviews, and generates dish recommendations. Currently, for simplification, it uses the API from OpenAI to get recommendations, but we could use an open-source LLM like LLaMA 3.1.
+The backend is a Python-based service that handles API requests, processes reviews, and generates dish recommendations. Currently, for simplification, it uses the API from OpenAI to process the reviews, but we could use an open-source LLM like LLaMA 3.1.
 
 ### Frontend
 The frontend is a simple HTML/CSS/JavaScript application that interacts with the backend service and Google Maps API.
@@ -37,7 +39,7 @@ The frontend is a simple HTML/CSS/JavaScript application that interacts with the
 2. **View Recommendations**: The application will display dish recommendations based on the reviews.
 
 ### Note
-The reviews obtained by Google Maps are currently limited to 5. However, we could use the library [`outscraper`](https://github.com/outscraper/outscraper-python/blob/master/examples/Google%20Maps%20Reviews.md) to scrape more reviews of a restaurant to provide more accurate recommendations.
+The reviews obtained by Google Maps are **currently limited to 5**. However, we could use the library [`outscraper`](https://github.com/outscraper/outscraper-python/blob/master/examples/Google%20Maps%20Reviews.md) to scrape more reviews of a restaurant to provide more accurate recommendations.
 
 
 ## Contributing

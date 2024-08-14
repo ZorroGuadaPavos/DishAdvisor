@@ -1,5 +1,13 @@
 function initialize() {
-    var input = document.getElementById('searchRestaurant');
+    var input = document.getElementById('search-input');
+    var clearButton = document.getElementById('clear-button');
+    var recommendations = document.getElementById('recommendations');
+
+    clearButton.addEventListener('click', function() {
+        input.value = '';
+        input.focus();
+        recommendations.innerHTML = '';
+    });
     setupAutocomplete(input);
 }
 
