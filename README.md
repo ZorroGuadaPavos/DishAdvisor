@@ -6,7 +6,7 @@ The core idea is to help users discover the best dishes based on reviews posted 
 <img src="preview.gif" alt="Preview" width="50%">
 
 ### Backend
-The backend is a Python-based service that handles API requests, processes reviews, and generates dish recommendations. Currently, for simplification, it uses the API from OpenAI to process the reviews, but we could use an open-source LLM like LLaMA 3.1.
+The backend is a Python-based service built with FastAPI that handles API requests, processes reviews, and generates dish recommendations. Currently, for simplification, it uses the API from OpenAI to process the reviews, but we could use an open-source LLM like LLaMA 3.1.
 
 ### Frontend
 The frontend is a simple HTML/CSS/JavaScript application that interacts with the backend service and Google Maps API.
@@ -43,11 +43,7 @@ The reviews obtained by Google Maps are **currently limited to 5**. However, we 
 
 
 ## Contributing
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Create a new Pull Request.
+This project is open source, and any type of refactor or improvement is welcome.
 
 ## License
 This project is licensed under the MIT License.
