@@ -7,6 +7,7 @@ function initialize() {
 		input.value = '';
 		input.focus();
 		recommendations.innerHTML = '';
+		clearButton.style.display = 'none';
 	});
 	setupAutocomplete(input);
 }
@@ -20,10 +21,12 @@ function setupAutocomplete(inputElement) {
 
 function handlePlaceChanged(autocomplete) {
 	document.getElementById('loader').style.display = 'flex';
+	document.getElementById('recommendations').innerText = '';
 	var place = autocomplete.getPlace();
 	if (place.reviews) {
 		const transformedReviews = transformReviews(place.reviews);
 		postReviews(transformedReviews).then(displayRecommendations).catch(handleError);
+		document.getElementById('clear-button').style.display = 'flex';
 	}
 }
 
