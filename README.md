@@ -5,7 +5,7 @@ Ever found yourself at an exotic restaurant, unsure of what to order? Or spent t
 ## Overview
 The core idea is to help users discover the best dishes based on reviews posted on google maps. This project is a **Prototype** that demonstrates how user feedback can guide diners to the most popular and highly-rated meals.
 
-<img src="preview.gif" alt="Preview">
+<img src="preview2.gif" alt="Preview">
 
 ### Backend
 The backend is a Python-based service built with FastAPI that handles API requests, processes reviews, and generates dish recommendations. Currently, for simplification, it uses the API from OpenAI to process the reviews, but we could use an open-source LLM like LLaMA 3.1.
